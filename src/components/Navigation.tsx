@@ -13,6 +13,7 @@ export const Navigation = () => {
     { label: 'Services', href: '/services' },
     { label: 'Tarifs', href: '/tarifs' },
     { label: 'Histoire', href: '/histoire' },
+    { label: 'Jeu Mental', href: '/jeu' },
   ];
 
   const isActive = (href: string) => location.pathname === href;
