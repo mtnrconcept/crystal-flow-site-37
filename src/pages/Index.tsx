@@ -6,6 +6,7 @@ import { TestimonialCard } from '@/components/TestimonialCard';
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { Footer } from '@/components/Footer';
 import { Particles } from '@/components/Particles';
+import { BrandMark } from '@/components/BrandMark';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -52,6 +53,11 @@ const Index = () => {
         <section className="py-20 px-6 bg-card/20 backdrop-blur-sm">
           <div className="container mx-auto">
             <div className="text-center mb-16">
+              {/* Logo centré */}
+              <div className="flex justify-center mb-12">
+                <BrandMark className="w-32 h-32 opacity-20" />
+              </div>
+              
               <h2 className="font-display text-4xl md:text-5xl mb-6 text-glow">Services</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Des pratiques complémentaires pour répondre à vos besoins

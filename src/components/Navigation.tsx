@@ -24,7 +24,7 @@ export const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <BrandMark className="w-8 h-8 text-primary transition-transform group-hover:scale-110" />
+            <BrandMark className="w-16 h-16 text-primary transition-transform group-hover:scale-110" />
             <div>
               <div className="font-display text-xl text-glow">7 Senses</div>
               <div className="text-xs text-muted-foreground">Guérisseur · Reiki · Magnétiseur</div>
