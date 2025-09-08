@@ -10,8 +10,13 @@ const Bio = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="container mx-auto text-center">
+      <section className="relative overflow-hidden pt-32 pb-20 px-6">
+        <img
+          src="/lovable-uploads/ds.png"
+          alt="Décor lumineux abstrait"
+          className="absolute inset-0 w-full h-full object-cover opacity-25 mix-blend-overlay pointer-events-none -z-10"
+        />
+        <div className="container mx-auto text-center relative">
           <h1 className="font-display text-5xl md:text-7xl mb-6 text-glow">À propos</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Parcours, éthique et cadre de soin
