@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Button } from './ui/button';
 import { Link } from 'react-router-dom';
+import { BrandMark } from './BrandMark';
 import heroImage from '@/assets/hero-reiki-male.jpg';
 
 export const Hero = () => {
@@ -62,19 +63,24 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 text-center px-6 max-w-4xl mx-auto">
-        <h1 className="font-display text-5xl md:text-7xl mb-6 text-glow fade-in-up">
+      <div className="relative z-20 text-center px-6 max-w-4xl mx-auto flex flex-col items-center">
+        {/* Logo en grande taille */}
+        <div className="mb-8 fade-in-up">
+          <BrandMark className="w-40 h-40 md:w-48 md:h-48" />
+        </div>
+        
+        <h1 className="font-display text-5xl md:text-7xl mb-6 text-glow fade-in-up" style={{ animationDelay: '0.2s' }}>
           7 Senses
         </h1>
-        <p className="text-xl md:text-2xl mb-4 text-foreground/90 fade-in-up" style={{ animationDelay: '0.2s' }}>
+        <p className="text-xl md:text-2xl mb-4 text-foreground/90 fade-in-up" style={{ animationDelay: '0.4s' }}>
           Guérisseur · Reiki · Magnétiseur
         </p>
-        <p className="text-lg md:text-xl mb-12 text-muted-foreground max-w-2xl mx-auto fade-in-up" style={{ animationDelay: '0.4s' }}>
+        <p className="text-lg md:text-xl mb-12 text-muted-foreground max-w-2xl mx-auto fade-in-up" style={{ animationDelay: '0.6s' }}>
           Rééquilibrage énergétique, apaisement et clarté intérieure. 
           Une approche douce et structurée pour retrouver l'harmonie.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center fade-in-up" style={{ animationDelay: '0.6s' }}>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center fade-in-up" style={{ animationDelay: '0.8s' }}>
           <Button asChild size="lg" className="btn-hero">
             <Link to="/contact">Prendre rendez-vous</Link>
           </Button>
