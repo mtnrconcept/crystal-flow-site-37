@@ -1,22 +1,13 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
-import path from "path";
-import { componentTagger } from "lovable-tagger";
+// vite.config.ts
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
-  server: {
-    host: "::",
-    port: 8080,
+// ⚠️ Tu utilises un domaine personnalisé (7-senses.ch) => base à "/"
+export default defineConfig({
+  plugins: [react()],
+  base: '/', // si un jour tu publies sur un sous-chemin GitHub (tonuser.github.io/mon-repo/), change par '/mon-repo/'
+  build: {
+    outDir: 'dist',
+    sourcemap: false,
   },
-  plugins: [
-    react(),
-    mode === 'development' &&
-    componentTagger(),
-  ].filter(Boolean),
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
-}));
+})
