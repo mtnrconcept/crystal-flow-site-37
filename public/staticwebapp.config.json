@@ -1,0 +1,6 @@
+{
+  "mimeTypes": {
+    ".ts": "text/javascript",
+    ".tsx": "text/javascript"
+  }
+}
